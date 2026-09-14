@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hire A Wifey | Build Your Wifey Experience</title>
+  <meta name="description" content="Build your custom Wifey to-do list and request premium home help across Australia. Simple time-based pricing.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wifey: {
+              DEFAULT: '#df6487',
+              dark: '#c4486d',
+              deep: '#9c2f50',
+              light: '#fdf0f4',
+              surface: '#fff8fa',
+              border: '#fad2df',
+              darkerPink: '#d25176'
+            },
+            charcoal: {
+              DEFAULT: '#1c1917',
+              soft: '#292524',
+              muted: '#57534e'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          boxShadow: {
+            'pink-glow': '0 8px 30px -4px rgba(223, 100, 135, 0.22)',
+            'pink-hover': '0 12px 35px -3px rgba(223, 100, 135, 0.28)',
+            'soft': '0 4px 24px -2px rgba(28, 25, 23, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Smooth transitions and scroll behavior */
+    html {
+      scroll-behavior: smooth;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #faf7f8;
+      color: #1c1917;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #faf7f8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #f0bccb;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #df6487;
+    }
+
+    /* Subtle pulse animation for popular badge */
+    @keyframes gentlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .pulse-badge {
+      animation: gentlePulse 3s infinite ease-in-out;
+    }
+
+    /* Step transition animation */
+    .step-content {
+      animation: fadeInSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-wifey selection:text-white">
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="bg-charcoal text-white text-[11px] sm:text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+    <span class="inline-flex w-2 h-2 rounded-full bg-wifey animate-ping"></span>
+    <span>✨ <strong>Wifey Time Packages:</strong> Choose your hours & customize your to-do list. Zero stress, pure home bliss.</span>
+  </div>
+
+  <!-- ================= HEADER / BRAND NAVIGATION ================= -->
+  <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-wifey-border/60 transition-all">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <!-- Logo Image Reference -->
+      <a href="#" onclick="location.reload()" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-wifey/40 rounded-lg p-1">
+        <img 
+          src="https://www.designarena.ai/u/eb580652-3162-4e1a-856c-cf52d9768721" 
+          alt="Hire A Wifey - We take care of home" 
+          class="h-12 sm:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+        />
+      </a>
+
+      <!-- Quick Trust Indicators / Help -->
+      <div class="flex items-center gap-3 sm:gap-6">
+        <div class="hidden sm:flex flex-col text-right">
+          <span class="text-xs font-bold text-charcoal flex items-center gap-1 justify-end">
+            <svg class="w-3.5 h-3.5 text-amber-500 fill-amber-500" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            5-Star Vetted Local Angels
+          </span>
+          <span class="text-[11px] text-wifey font-semibold">Police Checked & Insured</span>
+        </div>
+        <div class="bg-wifey-light text-wifey-dark px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 border border-wifey-border">
+          <svg class="w-3.5 h-3.5 text-wifey" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          No payment today
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PROGRESS & STEP INDICATOR ================= -->
+  <div class="bg-white border-b border-pink-100/80 sticky top-20 z-30 shadow-xs">
+    <div class="max-w-3xl mx-auto px-4 pt-3.5 pb-3">
+      <div class="flex items-center justify-between mb-1.5">
+        <div class="flex items-center gap-2">
+          <span class="text-[10px] tracking-wider uppercase font-extrabold text-wifey bg-wifey-light px-2.5 py-0.5 rounded-full" id="stepPillBadge">Step 1 of 7</span>
+          <h2 class="text-xs sm:text-sm font-bold text-charcoal font-sans" id="stepTitlePreview">Duration</h2>
+        </div>
+        <span class="text-xs font-semibold text-charcoal-muted" id="stepPercentText">14% complete</span>
+      </div>
+      <!-- Progress Bar Track -->
+      <div class="w-full bg-pink-100/70 h-2 rounded-full overflow-hidden">
+        <div id="progressBar" class="bg-wifey h-full rounded-full transition-all duration-300 ease-out" style="width: 14.28%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN MULTI-STEP CONTAINER ================= -->
+  <main class="flex-1 max-w-3xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-9 mb-24">
+    
+    <!-- STEP 1: DURATION SELECTION -->
+    <section id="step-1" class="step-content">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-1 text-wifey text-sm font-bold uppercase tracking-wider mb-2">
+          <span>💖</span> Build Your Wifey
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight mb-2">
+          How much <span class="text-wifey italic">Wifey time</span> do you need?
+        </h1>
+        <p class="text-charcoal-muted text-sm sm:text-base max-w-lg mx-auto">
+          Choose a block of dedicated time. Your Wifey will power through as many to-do list items as possible during this booking.
+        </p>
+      </div>
+
+      <!-- 4 Premium Duration Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" id="durationCardsGrid">
+        
+        <!-- 2 Hour Card -->
+        <div 
+          onclick="selectDuration(2, 129, '2 Hour Wifey')"
+          data-duration="2"
+          class="duration-card cursor-pointer relative bg-white border-2 border-pink-100 hover:border-wifey/60 rounded-2xl p-5 sm:p-6 transition-all duration-200 hover:shadow-pink-hover text-left group"
+        >
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs uppercase font-bold text-charcoal-muted tracking-wider bg-gray-100 group-hover:bg-wifey-light group-hover:text-wifey px-2.5 py-1 rounded-md transition-colors">Quick Reset</span>
+            <div class="select-indicator w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all">
+              <div class="inner-dot w-3 h-3 rounded-full bg-transparent"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-charcoal mb-1">2 Hour Wifey</h3>
+          <p class="text-xs text-charcoal-muted mb-4 leading-relaxed">Perfect for apartments or a fast kitchen, linen and tidy reset.</p>
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl font-extrabold text-charcoal tracking-tight font-sans">$129</span>
+            <span class="text-xs font-semibold text-charcoal-muted">AUD</span>
+          </div>
+        </div>
+
+        <!-- 3 Hour Card (MOST POPULAR) -->
+        <div 
+          onclick="selectDuration(3, 179, '3 Hour Wifey')"
+          data-duration="3"
+          class="duration-card cursor-pointer relative bg-white border-2 border-wifey rounded-2xl p-5 sm:p-6 shadow-pink-glow transition-all duration-200 text-left group"
+        >
+          <!-- Badge -->
+          <div class="absolute -top-3 right-6 bg-wifey text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-md tracking-wider pulse-badge">
+            ⭐️ Most Popular
+          </div>
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs uppercase font-bold text-wifey bg-wifey-light px-2.5 py-1 rounded-md">Balanced Clean & Tidy</span>
+            <div class="select-indicator w-6 h-6 rounded-full border-2 border-wifey bg-wifey flex items-center justify-center transition-all">
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-charcoal mb-1">3 Hour Wifey</h3>
+          <p class="text-xs text-charcoal-muted mb-4 leading-relaxed">The sweet spot. Household clean, bathroom sparkle plus laundry or meal prep.</p>
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl font-extrabold text-wifey tracking-tight font-sans">$179</span>
+            <span class="text-xs font-semibold text-charcoal-muted">AUD</span>
+          </div>
+        </div>
+
+        <!-- 4 Hour Card -->
+        <div 
+          onclick="selectDuration(4, 219, '4 Hour Wifey')"
+          data-duration="4"
+          class="duration-card cursor-pointer relative bg-white border-2 border-pink-100 hover:border-wifey/60 rounded-2xl p-5 sm:p-6 transition-all duration-200 hover:shadow-pink-hover text-left group"
+        >
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs uppercase font-bold text-charcoal-muted tracking-wider bg-gray-100 group-hover:bg-wifey-light group-hover:text-wifey px-2.5 py-1 rounded-md transition-colors">Family Home Hero</span>
+            <div class="select-indicator w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all">
+              <div class="inner-dot w-3 h-3 rounded-full bg-transparent"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-charcoal mb-1">4 Hour Wifey</h3>
+          <p class="text-xs text-charcoal-muted mb-4 leading-relaxed">Great for medium-to-large family homes needing multiple chores conquered.</p>
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl font-extrabold text-charcoal tracking-tight font-sans">$219</span>
+            <span class="text-xs font-semibold text-charcoal-muted">AUD</span>
+          </div>
+        </div>
+
+        <!-- 5 Hour Card -->
+        <div 
+          onclick="selectDuration(5, 269, '5 Hour Wifey')"
+          data-duration="5"
+          class="duration-card cursor-pointer relative bg-white border-2 border-pink-100 hover:border-wifey/60 rounded-2xl p-5 sm:p-6 transition-all duration-200 hover:shadow-pink-hover text-left group"
+        >
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs uppercase font-bold text-charcoal-muted tracking-wider bg-gray-100 group-hover:bg-wifey-light group-hover:text-wifey px-2.5 py-1 rounded-md transition-colors">Complete Home Bliss</span>
+            <div class="select-indicator w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all">
+              <div class="inner-dot w-3 h-3 rounded-full bg-transparent"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-charcoal mb-1">5 Hour Wifey</h3>
+          <p class="text-xs text-charcoal-muted mb-4 leading-relaxed">Ultimate deep care, full house overhaul, pantry re-org and weekly meal prep.</p>
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl font-extrabold text-charcoal tracking-tight font-sans">$269</span>
+            <span class="text-xs font-semibold text-charcoal-muted">AUD</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Honest reassurance -->
+      <div class="mt-8 bg-wifey-surface border border-wifey-border/80 rounded-xl p-4 flex items-center gap-3">
+        <span class="text-2xl">✨</span>
+        <p class="text-xs sm:text-sm text-charcoal">
+          <strong>No guessing games:</strong> You pay purely for your Wifey's time. You can tailor exactly what she focuses on in the very next step!
+        </p>
+      </div>
+    </section>
+
+    <!-- STEP 2: BUILD TO-DO LIST (VISUAL SHOWPIECE) -->
+    <section id="step-2" class="step-content hidden">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-1 text-wifey text-sm font-bold uppercase tracking-wider mb-2">
+          <span>📋</span> Step 2 • Customise
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight mb-2">
+          Build Your <span class="text-wifey italic">Wifey To-Do List</span>
+        </h1>
+        <p class="text-charcoal-muted text-sm sm:text-base max-w-lg mx-auto">
+          Choose as many tasks as you like. Your Wifey will work through your priorities during the time you’ve booked.
+        </p>
+        
+        <!-- Important Price Reassurance Banner -->
+        <div class="inline-flex items-center gap-2 bg-charcoal text-white text-xs px-4 py-2 rounded-full mt-4 font-semibold shadow-xs">
+          <svg class="w-4 h-4 text-wifey" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Adding tasks never changes your price. It’s 100% time-based!</span>
+        </div>
+      </div>
+
+      <!-- Task Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4" id="taskCardsContainer">
+        
+        <!-- Task: General Cleaning -->
+        <div 
+          onclick="toggleTask('cleaning')" 
+          id="task-cleaning"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            🧹
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">Household Cleaning</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Kitchen surfaces, stovetop, bathroom disinfection, vacuuming & mopping floors.</p>
+          </div>
+        </div>
+
+        <!-- Task: Laundry -->
+        <div 
+          onclick="toggleTask('laundry')" 
+          id="task-laundry"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            🧺
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">Laundry & Folding</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Washing loads, hanging out, dryer rotation, neatly folding and putting away clothes.</p>
+          </div>
+        </div>
+
+        <!-- Task: Ironing -->
+        <div 
+          onclick="toggleTask('ironing')" 
+          id="task-ironing"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            👔
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">Crisp Ironing</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Work shirts, school uniforms, dresses or sheets pressed to crisp perfection.</p>
+          </div>
+        </div>
+
+        <!-- Task: Making Beds / Linen -->
+        <div 
+          onclick="toggleTask('beds')" 
+          id="task-beds"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            🛏️
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">Changing Beds & Linen</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Stripping sheets, putting on fresh hotel-style tucked linen, plumping cushions.</p>
+          </div>
+        </div>
+
+        <!-- Task: Meal Prep -->
+        <div 
+          onclick="toggleTask('mealprep')" 
+          id="task-mealprep"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            🥗
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">Meal Prep & Veggie Chopping</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Simple family dinners prepared, fresh lunches boxed, vegetables prepped for the week.</p>
+          </div>
+        </div>
+
+        <!-- Task: Home Organisation -->
+        <div 
+          onclick="toggleTask('organisation')" 
+          id="task-organisation"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            🗂️
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">Pantry & Home Organisation</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Decluttering the kitchen pantry, kids toy tubs, wardrobe tidy or linen closet overhaul.</p>
+          </div>
+        </div>
+
+        <!-- Task: Tidying Up -->
+        <div 
+          onclick="toggleTask('tidying')" 
+          id="task-tidying"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            ✨
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">General Tidying & Reset</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Clearing coffee tables, unpacking dishwasher, tidying clutter and creating calm.</p>
+          </div>
+        </div>
+
+        <!-- Task: Something Else -->
+        <div 
+          onclick="toggleTask('custom')" 
+          id="task-custom"
+          class="task-card cursor-pointer bg-white border-2 border-pink-100 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-wifey/50 hover:shadow-soft flex items-start gap-4 select-none"
+        >
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-wifey flex-shrink-0 flex items-center justify-center text-2xl transition-colors card-icon">
+            📝
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-charcoal text-base">Something Else?</h4>
+              <span class="check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center transition-colors"></span>
+            </div>
+            <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Have a special request? Tell your Wifey what unique to-dos you need handled.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Optional custom text box if Something Else selected -->
+      <div id="customTaskBox" class="mt-4 hidden bg-white rounded-2xl border-2 border-wifey-border p-4">
+        <label for="customTaskInput" class="block text-xs font-bold text-charcoal mb-1">Describe your special request:</label>
+        <input 
+          type="text" 
+          id="customTaskInput" 
+          placeholder="e.g. Unpack moving boxes, water indoor plants, prep kid party bags..."
+          class="w-full px-4 py-2.5 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-wifey/50 text-sm text-charcoal"
+          oninput="state.customTaskDescription = this.value"
+        />
+      </div>
+
+      <!-- Task counter bar -->
+      <div class="mt-6 flex items-center justify-between px-3 py-2 bg-pink-50/70 rounded-xl text-xs text-charcoal font-medium">
+        <span>Selected Tasks: <strong id="selectedTaskCount" class="text-wifey font-bold">0</strong></span>
+        <span class="text-charcoal-muted">Choose at least 1 task to proceed</span>
+      </div>
+    </section>
+
+    <!-- STEP 3: TACKLE FIRST (PRIORITY SELECTION) -->
+    <section id="step-3" class="step-content hidden">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-1 text-wifey text-sm font-bold uppercase tracking-wider mb-2">
+          <span>🎯</span> Step 3 • Priorities
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight mb-2">
+          What should your Wifey <span class="text-wifey italic">tackle first?</span>
+        </h1>
+        <p class="text-charcoal-muted text-sm sm:text-base max-w-lg mx-auto">
+          We want to make sure the most critical task gets done right away when she arrives at your door.
+        </p>
+      </div>
+
+      <!-- Priority Cards Generated dynamically from step 2 selections -->
+      <div class="space-y-3" id="priorityOptionsList">
+        <!-- Rendered by JS based on state.selectedTasks -->
+      </div>
+
+      <!-- Additional Priority Notes -->
+      <div class="mt-8 bg-white border border-pink-100 rounded-2xl p-5 shadow-xs">
+        <label for="priorityNotes" class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-2">
+          Specific instructions or priorities? (Optional)
+        </label>
+        <textarea 
+          id="priorityNotes" 
+          rows="3" 
+          placeholder="e.g. 'Please prioritize the kids bathrooms and leave folded laundry on the master bed'..."
+          class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm text-charcoal placeholder:text-gray-400"
+          oninput="state.priorityNotes = this.value"
+        ></textarea>
+      </div>
+    </section>
+
+    <!-- STEP 4: FREQUENCY -->
+    <section id="step-4" class="step-content hidden">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-1 text-wifey text-sm font-bold uppercase tracking-wider mb-2">
+          <span>🗓️</span> Step 4 • Cadence
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight mb-2">
+          How often would you like a <span class="text-wifey italic">Wifey?</span>
+        </h1>
+        <p class="text-charcoal-muted text-sm sm:text-base max-w-lg mx-auto">
+          Enjoy recurring bliss or book a one-off reset whenever life gets overwhelming.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto" id="frequencyCards">
+        
+        <!-- Weekly -->
+        <div 
+          onclick="selectFrequency('Weekly')"
+          data-freq="Weekly"
+          class="freq-card cursor-pointer bg-white border-2 border-pink-100 hover:border-wifey/60 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-soft"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xl">🌸</span>
+            <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+            </div>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-charcoal">Weekly</h4>
+          <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Maximum zen. Your home stays in perpetual hotel condition.</p>
+        </div>
+
+        <!-- Fortnightly (Recommended) -->
+        <div 
+          onclick="selectFrequency('Fortnightly')"
+          data-freq="Fortnightly"
+          class="freq-card cursor-pointer bg-white border-2 border-pink-100 hover:border-wifey/60 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-soft relative"
+        >
+          <div class="absolute -top-2.5 right-4 bg-wifey text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
+            Most Loved
+          </div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xl">✨</span>
+            <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+            </div>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-charcoal">Fortnightly</h4>
+          <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Every 2 weeks. The golden standard for busy Australian households.</p>
+        </div>
+
+        <!-- Every 4 Weeks -->
+        <div 
+          onclick="selectFrequency('Every 4 Weeks')"
+          data-freq="Every 4 Weeks"
+          class="freq-card cursor-pointer bg-white border-2 border-pink-100 hover:border-wifey/60 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-soft"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xl">🌿</span>
+            <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+            </div>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-charcoal">Every 4 Weeks</h4>
+          <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Monthly deep refresh to tackle the tasks you keep putting off.</p>
+        </div>
+
+        <!-- One-Off -->
+        <div 
+          onclick="selectFrequency('One-Off Reset')"
+          data-freq="One-Off Reset"
+          class="freq-card cursor-pointer bg-white border-2 border-pink-100 hover:border-wifey/60 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-soft"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xl">⚡️</span>
+            <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+            </div>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-charcoal">One-Off Reset</h4>
+          <p class="text-xs text-charcoal-muted mt-1 leading-relaxed">Try the magic before committing, or book for a special occasion.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STEP 5: DAY & TIME PREFERENCES -->
+    <section id="step-5" class="step-content hidden">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-1 text-wifey text-sm font-bold uppercase tracking-wider mb-2">
+          <span>⏰</span> Step 5 • Scheduling
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight mb-2">
+          When would you like your <span class="text-wifey italic">Wifey?</span>
+        </h1>
+        <p class="text-charcoal-muted text-sm sm:text-base max-w-lg mx-auto">
+          Let us know your ideal routine. We'll verify helper routes and confirm your preferred slot.
+        </p>
+      </div>
+
+      <div class="max-w-xl mx-auto space-y-6">
+        
+        <!-- Preferred Days -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-3">
+            1. Preferred Day of the Week
+          </label>
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2" id="dayPillContainer">
+            <button type="button" onclick="selectDay('Monday')" data-day="Monday" class="day-btn py-3 rounded-xl border border-pink-200 bg-white font-semibold text-xs sm:text-sm text-charcoal hover:border-wifey hover:bg-wifey-light transition-all">Mon</button>
+            <button type="button" onclick="selectDay('Tuesday')" data-day="Tuesday" class="day-btn py-3 rounded-xl border border-pink-200 bg-white font-semibold text-xs sm:text-sm text-charcoal hover:border-wifey hover:bg-wifey-light transition-all">Tue</button>
+            <button type="button" onclick="selectDay('Wednesday')" data-day="Wednesday" class="day-btn py-3 rounded-xl border border-pink-200 bg-white font-semibold text-xs sm:text-sm text-charcoal hover:border-wifey hover:bg-wifey-light transition-all">Wed</button>
+            <button type="button" onclick="selectDay('Thursday')" data-day="Thursday" class="day-btn py-3 rounded-xl border border-pink-200 bg-white font-semibold text-xs sm:text-sm text-charcoal hover:border-wifey hover:bg-wifey-light transition-all">Thu</button>
+            <button type="button" onclick="selectDay('Friday')" data-day="Friday" class="day-btn py-3 rounded-xl border border-pink-200 bg-white font-semibold text-xs sm:text-sm text-charcoal hover:border-wifey hover:bg-wifey-light transition-all">Fri</button>
+            <button type="button" onclick="selectDay('Saturday')" data-day="Saturday" class="day-btn py-3 rounded-xl border border-pink-200 bg-white font-semibold text-xs sm:text-sm text-charcoal hover:border-wifey hover:bg-wifey-light transition-all">Sat</button>
+          </div>
+        </div>
+
+        <!-- Preferred Time of Day -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-3">
+            2. Preferred Arrival Window
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="timeSlotContainer">
+            
+            <div onclick="selectTimeWindow('Morning (8:00 AM - 12:00 PM)')" data-time="Morning (8:00 AM - 12:00 PM)" class="time-card cursor-pointer p-4 rounded-xl border-2 border-pink-100 bg-white hover:border-wifey transition-all flex items-center justify-between">
+              <div>
+                <span class="font-bold text-sm text-charcoal block">Morning Arrival</span>
+                <span class="text-xs text-charcoal-muted">8:00 AM – 12:00 PM</span>
+              </div>
+              <span class="text-xl">☕️</span>
+            </div>
+
+            <div onclick="selectTimeWindow('Midday (11:00 AM - 2:00 PM)')" data-time="Midday (11:00 AM - 2:00 PM)" class="time-card cursor-pointer p-4 rounded-xl border-2 border-pink-100 bg-white hover:border-wifey transition-all flex items-center justify-between">
+              <div>
+                <span class="font-bold text-sm text-charcoal block">Midday Arrival</span>
+                <span class="text-xs text-charcoal-muted">11:00 AM – 2:00 PM</span>
+              </div>
+              <span class="text-xl">☀️</span>
+            </div>
+
+            <div onclick="selectTimeWindow('Afternoon (1:00 PM - 5:00 PM)')" data-time="Afternoon (1:00 PM - 5:00 PM)" class="time-card cursor-pointer p-4 rounded-xl border-2 border-pink-100 bg-white hover:border-wifey transition-all flex items-center justify-between">
+              <div>
+                <span class="font-bold text-sm text-charcoal block">Afternoon Arrival</span>
+                <span class="text-xs text-charcoal-muted">1:00 PM – 5:00 PM</span>
+              </div>
+              <span class="text-xl">🌤️</span>
+            </div>
+
+            <div onclick="selectTimeWindow('I\'m Flexible (Anytime)')" data-time="I'm Flexible (Anytime)" class="time-card cursor-pointer p-4 rounded-xl border-2 border-pink-100 bg-white hover:border-wifey transition-all flex items-center justify-between">
+              <div>
+                <span class="font-bold text-sm text-charcoal block">I'm Flexible</span>
+                <span class="text-xs text-charcoal-muted">Fastest helper allocation</span>
+              </div>
+              <span class="text-xl">⚡️</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Availability Disclaimer -->
+        <div class="bg-pink-50/70 rounded-xl p-4 flex items-start gap-3 border border-pink-100">
+          <svg class="w-5 h-5 text-wifey flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p class="text-xs text-charcoal leading-relaxed">
+            <strong>Booking Request Notice:</strong> This is a scheduling request. Our booking coordinator will immediately check local team routes in your suburb and confirm your official time.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STEP 6: HOME & CONTACT DETAILS -->
+    <section id="step-6" class="step-content hidden">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-1 text-wifey text-sm font-bold uppercase tracking-wider mb-2">
+          <span>🏡</span> Step 6 • Your Sanctuary
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight mb-2">
+          Tell us about <span class="text-wifey italic">your home</span>
+        </h1>
+        <p class="text-charcoal-muted text-sm sm:text-base max-w-lg mx-auto">
+          We use this to pair you with the best nearby Wifey who loves your specific setup and pets.
+        </p>
+      </div>
+
+      <div class="bg-white border-2 border-pink-100 rounded-2xl p-5 sm:p-7 shadow-soft max-w-xl mx-auto space-y-5">
+        
+        <!-- Name -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-charcoal mb-1">First Name *</label>
+            <input 
+              type="text" 
+              id="custFirstName" 
+              required
+              placeholder="e.g. Zannatul"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
+              oninput="state.home.firstName = this.value"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-charcoal mb-1">Last Name *</label>
+            <input 
+              type="text" 
+              id="custLastName" 
+              required
+              placeholder="e.g. Ferdousi"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
+              oninput="state.home.lastName = this.value"
+            />
+          </div>
+        </div>
+
+        <!-- Mobile & Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-charcoal mb-1">Mobile Phone (AU) *</label>
+            <input 
+              type="tel" 
+              id="custPhone" 
+              required
+              placeholder="+8801716543250"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
+              oninput="state.home.phone = this.value"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-charcoal mb-1">Email Address *</label>
+            <input 
+              type="email" 
+              id="custEmail" 
+              required
+              placeholder="imzannatul1981@gmail.com"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
+              oninput="state.home.email = this.value"
+            />
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label class="block text-xs font-bold text-charcoal mb-1">Street Address *</label>
+          <input 
+            type="text" 
+            id="custStreet" 
+            required
+            placeholder="e.g. 42 Sunshine Avenue"
+            class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
+            oninput="state.home.street = this.value"
+          />
+        </div>
+
+        <!-- Suburb & Postcode -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div class="col-span-2 sm:col-span-2">
+            <label class="block text-xs font-bold text-charcoal mb-1">Suburb *</label>
+            <input 
+              type="text" 
+              id="custSuburb" 
+              required
+              placeholder="e.g. Paddington / South Yarra"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
+              oninput="state.home.suburb = this.value"
+            />
+          </div>
+          <div class="col-span-1">
+            <label class="block text-xs font-bold text-charcoal mb-1">Postcode *</label>
+            <input 
+              type="text" 
+              id="custPostcode" 
+              required
+              placeholder="3100"
+              maxlength="4"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
+              oninput="state.home.postcode = this.value"
+            />
+          </div>
+        </div>
+
+        <!-- Home Specifications (Bedrooms / Bathrooms) -->
+        <div class="pt-3 border-t border-pink-100">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Bedrooms -->
+            <div>
+              <label class="block text-xs font-bold text-charcoal mb-1.5">Bedrooms</label>
+              <div class="grid grid-cols-5 gap-1.5" id="bedSelector">
+                <button type="button" onclick="setBeds('1')" data-bed="1" class="bed-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200">1</button>
+                <button type="button" onclick="setBeds('2')" data-bed="2" class="bed-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200">2</button>
+                <button type="button" onclick="setBeds('3')" data-bed="3" class="bed-pill py-2 rounded-lg border text-xs font-semibold bg-wifey text-white border-wifey font-bold">3</button>
+                <button type="button" onclick="setBeds('4')" data-bed="4" class="bed-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200">4</button>
+                <button type="button" onclick="setBeds('5+')" data-bed="5+" class="bed-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200">5+</button>
+              </div>
+            </div>
+
+            <!-- Bathrooms -->
+            <div>
+              <label class="block text-xs font-bold text-charcoal mb-1.5">Bathrooms</label>
+              <div class="grid grid-cols-4 gap-1.5" id="bathSelector">
+                <button type="button" onclick="setBaths('1')" data-bath="1" class="bath-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200">1</button>
+                <button type="button" onclick="setBaths('2')" data-bath="2" class="bath-pill py-2 rounded-lg border text-xs font-semibold bg-wifey text-white border-wifey font-bold">2</button>
+                <button type="button" onclick="setBaths('3')" data-bath="3" class="bath-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200">3</button>
+                <button type="button" onclick="setBaths('4+')" data-bath="4+" class="bath-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200">4+</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Pets Multi-toggle -->
+        <div class="pt-2">
+          <label class="block text-xs font-bold text-charcoal mb-2">Any furry family members?</label>
+          <div class="grid grid-cols-4 gap-2">
+            <button type="button" onclick="togglePet('Dog')" id="pet-Dog" class="pet-btn py-2 rounded-xl border border-gray-200 text-xs font-medium hover:border-wifey transition-colors">🐶 Dog(s)</button>
+            <button type="button" onclick="togglePet('Cat')" id="pet-Cat" class="pet-btn py-2 rounded-xl border border-gray-200 text-xs font-medium hover:border-wifey transition-colors">🐱 Cat(s)</button>
+            <button type="button" onclick="togglePet('Other')" id="pet-Other" class="pet-btn py-2 rounded-xl border border-gray-200 text-xs font-medium hover:border-wifey transition-colors">🐰 Other</button>
+            <button type="button" onclick="togglePet('None')" id="pet-None" class="pet-btn py-2 rounded-xl border border-gray-200 text-xs font-medium hover:border-wifey transition-colors">🚫 None</button>
+          </div>
+        </div>
+
+        <!-- Entry Notes -->
+        <div>
+          <label class="block text-xs font-bold text-charcoal mb-1">Access or Parking Notes (Optional)</label>
+          <input 
+            type="text" 
+            placeholder="e.g. Driveway parking available, lockbox code is 1234, dog in backyard..."
+            class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-xs text-charcoal"
+            oninput="state.home.notes = this.value"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STEP 7: FINAL REQUEST SUMMARY & SUBMIT -->
+    <section id="step-7" class="step-content hidden">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-1 text-wifey text-sm font-bold uppercase tracking-wider mb-2">
+          <span>💫</span> Step 7 • Review & Request
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-serif font-bold text-charcoal tracking-tight mb-2">
+          Your Wifey <span class="text-wifey italic">Request Summary</span>
+        </h1>
+        <p class="text-charcoal-muted text-sm sm:text-base max-w-lg mx-auto">
+          Take a quick look over your home-help plan before sending your request through.
+        </p>
+      </div>
+
+      <!-- Complete Summary Card -->
+      <div class="bg-white border-2 border-wifey-border rounded-3xl p-6 sm:p-8 shadow-pink-glow max-w-xl mx-auto space-y-6">
+        
+        <!-- Header Banner in Card: Selected Package -->
+        <div class="flex items-center justify-between pb-5 border-b border-pink-100">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-wifey bg-wifey-light px-3 py-1 rounded-full">Confirmed Wifey Time</span>
+            <h3 class="text-2xl font-serif font-bold text-charcoal mt-1.5" id="summaryDurationTitle">3 Hour Wifey</h3>
+            <p class="text-xs text-charcoal-muted" id="summaryFrequencyText">Fortnightly Service</p>
+          </div>
+          <div class="text-right">
+            <span class="text-3xl font-extrabold text-wifey font-sans" id="summaryPriceText">$179</span>
+            <span class="text-xs block text-charcoal-muted font-medium">Flat Rate (AUD)</span>
+          </div>
+        </div>
+
+        <!-- #1 Priority Highlight -->
+        <div class="bg-pink-50/70 border border-wifey-border rounded-2xl p-4 flex items-start gap-3.5">
+          <span class="text-2xl flex-shrink-0">🎯</span>
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-wifey block">Your #1 Priority First Task:</span>
+            <h4 class="font-bold text-charcoal text-base" id="summaryPriorityTask">Household Cleaning</h4>
+            <p class="text-xs text-charcoal-muted mt-0.5 italic" id="summaryPriorityNotes">"No extra notes provided"</p>
+          </div>
+        </div>
+
+        <!-- Detailed Breakdown -->
+        <div class="space-y-3.5 text-sm">
+          
+          <!-- Full To-Do list tags -->
+          <div>
+            <span class="text-xs font-bold text-charcoal-muted uppercase tracking-wider block mb-2">Complete Wifey To-Do List:</span>
+            <div class="flex flex-wrap gap-2" id="summaryTaskPills">
+              <!-- Rendered tags -->
+            </div>
+          </div>
+
+          <!-- Schedule & Location -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-pink-100">
+            <div class="bg-pink-50/30 p-3 rounded-xl">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted block">Preferred Slot</span>
+              <p class="font-semibold text-charcoal text-xs sm:text-sm mt-0.5" id="summaryScheduleText">Wednesday • Morning (8:00 AM - 12:00 PM)</p>
+            </div>
+            <div class="bg-pink-50/30 p-3 rounded-xl">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted block">Home & Location</span>
+              <p class="font-semibold text-charcoal text-xs sm:text-sm mt-0.5" id="summaryLocationText">Paddington, NSW 2021 (3 bed, 2 bath)</p>
+            </div>
+          </div>
+
+          <!-- Contact details review -->
+          <div class="bg-pink-50/30 p-3 rounded-xl">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted block">Booking Under:</span>
+            <p class="font-semibold text-charcoal text-xs sm:text-sm mt-0.5" id="summaryCustomerInfo">Zannatul Ferdousi • +8801716543250 • imzannatul1981@gmail.com</p>
+          </div>
+
+        </div>
+
+        <!-- Big Request CTA & Reassurance -->
+        <div class="pt-2 text-center">
+          <button 
+            type="button" 
+            onclick="submitFinalRequest()" 
+            class="w-full bg-wifey hover:bg-wifey-dark text-white font-bold py-4 px-6 rounded-2xl text-lg sm:text-xl shadow-pink-glow hover:shadow-pink-hover transition-all duration-200 transform active:scale-[0.99] flex items-center justify-center gap-3 group"
+          >
+            <span>REQUEST MY WIFEY</span>
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+          
+          <div class="mt-3.5 space-y-1">
+            <p class="text-xs sm:text-sm font-semibold text-charcoal">
+              🔒 No payment is taken today.
+            </p>
+            <p class="text-[11px] sm:text-xs text-charcoal-muted">
+              We’ll confirm availability with you before your booking is finalised.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STEP 8: CONFIRMATION SUCCESS SCREEN -->
+    <section id="step-8" class="step-content hidden">
+      <div class="max-w-lg mx-auto bg-white border-2 border-wifey-border rounded-3xl p-6 sm:p-10 shadow-pink-glow text-center">
+        
+        <!-- Celebration Badge -->
+        <div class="w-20 h-20 bg-wifey-light text-wifey rounded-full flex items-center justify-center text-4xl mx-auto mb-5 shadow-inner">
+          🎉
+        </div>
+
+        <span class="text-xs font-extrabold uppercase tracking-wider text-wifey bg-wifey-light px-3.5 py-1 rounded-full inline-block mb-3">
+          Request Received
+        </span>
+
+        <h1 class="text-2xl sm:text-3xl font-serif font-bold text-charcoal mb-2">
+          Your Wifey request is in!
+        </h1>
+        
+        <p class="text-charcoal-muted text-sm sm:text-base mb-6 leading-relaxed">
+          Take a deep breath and pop your feet up. Our team has received your home priorities and we're matching your dedicated local angel now.
+        </p>
+
+        <!-- Reference card -->
+        <div class="bg-wifey-surface border border-wifey-border rounded-2xl p-4 mb-6 text-left space-y-2">
+          <div class="flex justify-between items-center text-xs pb-2 border-b border-pink-100">
+            <span class="font-bold text-charcoal-muted">Reference Number:</span>
+            <span class="font-mono font-bold text-wifey" id="bookingRef">#HW-8492</span>
+          </div>
+          <div class="flex justify-between items-center text-xs pb-2 border-b border-pink-100">
+            <span class="font-bold text-charcoal-muted">Service Package:</span>
+            <span class="font-bold text-charcoal" id="confirmPackage">3 Hour Wifey ($179)</span>
+          </div>
+          <div class="flex justify-between items-center text-xs">
+            <span class="font-bold text-charcoal-muted">Preferred Time:</span>
+            <span class="font-bold text-charcoal" id="confirmTime">Wed • Morning Window</span>
+          </div>
+        </div>
+
+        <!-- What happens next steps -->
+        <div class="text-left mb-8 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-charcoal">What happens next:</h4>
+          
+          <div class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-wifey text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+            <p class="text-xs text-charcoal leading-relaxed">
+              <strong>Availability Review:</strong> Our coordinator reviews local route schedules within 2 business hours.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-wifey text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+            <p class="text-xs text-charcoal leading-relaxed">
+              <strong>SMS & Email Confirmation:</strong> We'll message you to lock in the exact arrival time and introduce your verified Wifey.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-wifey text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+            <p class="text-xs text-charcoal leading-relaxed">
+              <strong>Enjoy the Relief:</strong> She arrives ready to power through your to-do list while you reclaim your weekend!
+            </p>
+          </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button 
+            onclick="location.reload()" 
+            class="flex-1 bg-charcoal text-white hover:bg-black font-bold py-3 px-4 rounded-xl text-xs sm:text-sm transition-all"
+          >
+            Submit Another Request
+          </button>
+          <a 
+            href="#" 
+            onclick="window.print(); return false;" 
+            class="flex-1 border border-pink-200 text-charcoal hover:bg-pink-50 font-bold py-3 px-4 rounded-xl text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
+          >
+            <svg class="w-4 h-4 text-charcoal-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            Print / Save Receipt
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= STICKY FOOTER NAVIGATION / SUMMARY BAR ================= -->
+  <footer id="stickyNavFooter" class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-pink-100 shadow-[0_-4px_25px_rgba(0,0,0,0.06)] py-3 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Current selection summary -->
+      <div class="flex items-center gap-3">
+        <!-- Back button (hidden on step 1 & step 8) -->
+        <button 
+          id="backBtn" 
+          onclick="prevStep()" 
+          class="hidden px-3.5 py-2.5 rounded-xl border border-gray-200 hover:border-wifey text-xs font-bold text-charcoal transition-colors items-center gap-1"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          <span class="hidden sm:inline">Back</span>
+        </button>
+
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="text-xs sm:text-sm font-serif font-bold text-charcoal" id="stickyPackageName">3 Hour Wifey</span>
+            <span class="text-xs font-extrabold text-wifey bg-wifey-light px-2 py-0.5 rounded-md" id="stickyPriceTag">$179</span>
+          </div>
+          <span class="text-[11px] text-charcoal-muted truncate max-w-[170px] sm:max-w-xs" id="stickySubtext">
+            Household Clean, Laundry + 1 more
+          </span>
+        </div>
+      </div>
+
+      <!-- Forward / Next Step CTA -->
+      <div class="flex items-center gap-2">
+        <button 
+          id="nextBtn" 
+          onclick="nextStep()" 
+          class="bg-wifey hover:bg-wifey-dark text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-sm shadow-pink-glow hover:shadow-pink-hover transition-all flex items-center gap-2"
+        >
+          <span id="nextBtnText">Continue to Tasks</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= LOGIC & INTERACTION SCRIPTS ================= -->
+  <script>
+    // Master State Object - Designed for clean extraction into WordPress / Gravity Forms backend
+    const state = {
+      currentStep: 1,
+      totalSteps: 7,
+      duration: {
+        hours: 3,
+        price: 179,
+        title: '3 Hour Wifey'
+      },
+      selectedTasks: ['cleaning', 'laundry'],
+      customTaskDescription: '',
+      priorityTask: 'cleaning',
+      priorityNotes: '',
+      frequency: 'Fortnightly',
+      preferredDay: 'Wednesday',
+      preferredTime: 'Morning (8:00 AM - 12:00 PM)',
+      home: {
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        street: '',
+        suburb: '',
+        postcode: '',
+        beds: '3',
+        baths: '2',
+        pets: ['Dog'],
+        notes: ''
+      }
+    };
+
+    // Task metadata dictionary
+    const taskDictionary = {
+      cleaning: { name: 'Household Cleaning', icon: '🧹' },
+      laundry: { name: 'Laundry & Folding', icon: '🧺' },
+      ironing: { name: 'Crisp Ironing', icon: '👔' },
+      beds: { name: 'Changing Beds & Linen', icon: '🛏️' },
+      mealprep: { name: 'Meal Prep & Cooking', icon: '🥗' },
+      organisation: { name: 'Pantry & Organisation', icon: '🗂️' },
+      tidying: { name: 'General Tidying & Reset', icon: '✨' },
+      custom: { name: 'Something Else (Custom)', icon: '📝' }
+    };
+
+    // Step Title Meta
+    const stepMetadata = [
+      { step: 1, pill: 'Step 1 of 7', title: 'Duration & Price', nextText: 'Build To-Do List' },
+      { step: 2, pill: 'Step 2 of 7', title: 'Wifey To-Do List', nextText: 'Set Priorities' },
+      { step: 3, pill: 'Step 3 of 7', title: 'Top Priority First', nextText: 'Choose Frequency' },
+      { step: 4, pill: 'Step 4 of 7', title: 'Cadence', nextText: 'Select Days' },
+      { step: 5, pill: 'Step 5 of 7', title: 'Day & Time', nextText: 'Home Details' },
+      { step: 6, pill: 'Step 6 of 7', title: 'Home Details', nextText: 'Review Summary' },
+      { step: 7, pill: 'Step 7 of 7', title: 'Review & Request', nextText: 'Request My Wifey' }
+    ];
+
+    // ================= STEP 1: DURATION SELECTION =================
+    function selectDuration(hours, price, title) {
+      state.duration = { hours, price, title };
+      
+      // Update UI cards
+      document.querySelectorAll('.duration-card').forEach(card => {
+        const cardHours = parseInt(card.getAttribute('data-duration'));
+        const indicator = card.querySelector('.select-indicator');
+        
+        if (cardHours === hours) {
+          card.classList.remove('border-pink-100');
+          card.classList.add('border-wifey', 'shadow-pink-glow');
+          indicator.className = 'select-indicator w-6 h-6 rounded-full border-2 border-wifey bg-wifey flex items-center justify-center transition-all';
+          indicator.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>';
+        } else {
+          card.classList.remove('border-wifey', 'shadow-pink-glow');
+          card.classList.add('border-pink-100');
+          indicator.className = 'select-indicator w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all';
+          indicator.innerHTML = '<div class="inner-dot w-3 h-3 rounded-full bg-transparent"></div>';
+        }
+      });
+
+      updateStickyBar();
+    }
+
+    // ================= STEP 2: TASK SELECTION =================
+    function toggleTask(taskId) {
+      const index = state.selectedTasks.indexOf(taskId);
+      if (index > -1) {
+        state.selectedTasks.splice(index, 1);
+      } else {
+        state.selectedTasks.push(taskId);
+      }
+
+      // If custom was toggled, show/hide input
+      const customBox = document.getElementById('customTaskBox');
+      if (state.selectedTasks.includes('custom')) {
+        customBox.classList.remove('hidden');
+      } else {
+        customBox.classList.add('hidden');
+      }
+
+      // Update card visual
+      renderTaskSelectionStyles();
+      updateTaskCount();
+      updateStickyBar();
+    }
+
+    function renderTaskSelectionStyles() {
+      Object.keys(taskDictionary).forEach(taskId => {
+        const card = document.getElementById(`task-${taskId}`);
+        if (!card) return;
+        const checkBox = card.querySelector('.check-box');
+        const iconContainer = card.querySelector('.card-icon');
+        const isSelected = state.selectedTasks.includes(taskId);
+
+        if (isSelected) {
+          card.classList.add('border-wifey', 'bg-wifey-surface', 'shadow-pink-glow');
+          card.classList.remove('border-pink-100', 'bg-white');
+          checkBox.className = 'check-box w-5 h-5 rounded-md border-2 border-wifey bg-wifey flex items-center justify-center text-white';
+          checkBox.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>';
+          iconContainer.classList.add('bg-wifey', 'text-white');
+          iconContainer.classList.remove('bg-pink-50', 'text-wifey');
+        } else {
+          card.classList.remove('border-wifey', 'bg-wifey-surface', 'shadow-pink-glow');
+          card.classList.add('border-pink-100', 'bg-white');
+          checkBox.className = 'check-box w-5 h-5 rounded-md border-2 border-gray-300 flex items-center justify-center text-transparent';
+          checkBox.innerHTML = '';
+          iconContainer.classList.remove('bg-wifey', 'text-white');
+          iconContainer.classList.add('bg-pink-50', 'text-wifey');
+        }
+      });
+    }
+
+    function updateTaskCount() {
+      const countEl = document.getElementById('selectedTaskCount');
+      if (countEl) countEl.innerText = state.selectedTasks.length;
+    }
+
+    // ================= STEP 3: DYNAMIC PRIORITY SELECTION =================
+    function populateStep3Priorities() {
+      const container = document.getElementById('priorityOptionsList');
+      container.innerHTML = '';
+
+      // If user unselected the previously active priority, reset to first available
+      if (!state.selectedTasks.includes(state.priorityTask)) {
+        state.priorityTask = state.selectedTasks[0] || 'cleaning';
+      }
+
+      state.selectedTasks.forEach(taskId => {
+        const meta = taskDictionary[taskId];
+        const isChecked = state.priorityTask === taskId;
+        const customNoteLabel = taskId === 'custom' && state.customTaskDescription ? ` ("${state.customTaskDescription}")` : '';
+
+        const div = document.createElement('div');
+        div.className = `priority-card cursor-pointer p-4 rounded-2xl border-2 transition-all flex items-center justify-between ${
+          isChecked ? 'border-wifey bg-wifey-surface shadow-pink-glow' : 'border-pink-100 bg-white hover:border-wifey/40'
+        }`;
+        div.onclick = () => selectPriority(taskId);
+        div.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">${meta.icon}</span>
+            <div>
+              <h4 class="font-bold text-sm text-charcoal">${meta.name}${customNoteLabel}</h4>
+              <span class="text-[11px] text-charcoal-muted">${isChecked ? '⭐️ Start with this immediately' : 'Available task'}</span>
+            </div>
+          </div>
+          <div class="priority-radio w-6 h-6 rounded-full border-2 ${isChecked ? 'border-wifey bg-wifey' : 'border-gray-300'} flex items-center justify-center">
+            ${isChecked ? '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>' : ''}
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function selectPriority(taskId) {
+      state.priorityTask = taskId;
+      populateStep3Priorities();
+      updateStickyBar();
+    }
+
+    // ================= STEP 4: FREQUENCY SELECTION =================
+    function selectFrequency(freq) {
+      state.frequency = freq;
+      document.querySelectorAll('.freq-card').forEach(card => {
+        const cardFreq = card.getAttribute('data-freq');
+        const radio = card.querySelector('.radio-circle');
+        if (cardFreq === freq) {
+          card.classList.add('border-wifey', 'bg-wifey-surface', 'shadow-pink-glow');
+          card.classList.remove('border-pink-100', 'bg-white');
+          radio.className = 'radio-circle w-5 h-5 rounded-full border-2 border-wifey bg-wifey flex items-center justify-center text-white';
+          radio.innerHTML = '<div class="w-2 h-2 rounded-full bg-white"></div>';
+        } else {
+          card.classList.remove('border-wifey', 'bg-wifey-surface', 'shadow-pink-glow');
+          card.classList.add('border-pink-100', 'bg-white');
+          radio.className = 'radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center';
+          radio.innerHTML = '<div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>';
+        }
+      });
+      updateStickyBar();
+    }
+
+    // ================= STEP 5: DAY & TIME =================
+    function selectDay(day) {
+      state.preferredDay = day;
+      document.querySelectorAll('.day-btn').forEach(btn => {
+        if (btn.getAttribute('data-day') === day) {
+          btn.classList.add('bg-wifey', 'text-white', 'border-wifey', 'shadow-xs');
+          btn.classList.remove('bg-white', 'text-charcoal', 'border-pink-200');
+        } else {
+          btn.classList.remove('bg-wifey', 'text-white', 'border-wifey', 'shadow-xs');
+          btn.classList.add('bg-white', 'text-charcoal', 'border-pink-200');
+        }
+      });
+      updateStickyBar();
+    }
+
+    function selectTimeWindow(time) {
+      state.preferredTime = time;
+      document.querySelectorAll('.time-card').forEach(card => {
+        if (card.getAttribute('data-time') === time) {
+          card.classList.add('border-wifey', 'bg-wifey-surface', 'shadow-pink-glow');
+          card.classList.remove('border-pink-100', 'bg-white');
+        } else {
+          card.classList.remove('border-wifey', 'bg-wifey-surface', 'shadow-pink-glow');
+          card.classList.add('border-pink-100', 'bg-white');
+        }
+      });
+      updateStickyBar();
+    }
+
+    // ================= STEP 6: HOME DETAILS HELPERS =================
+    function setBeds(count) {
+      state.home.beds = count;
+      document.querySelectorAll('.bed-pill').forEach(pill => {
+        if (pill.getAttribute('data-bed') === count) {
+          pill.className = 'bed-pill py-2 rounded-lg border text-xs font-bold bg-wifey text-white border-wifey shadow-xs';
+        } else {
+          pill.className = 'bed-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200 text-charcoal';
+        }
+      });
+    }
+
+    function setBaths(count) {
+      state.home.baths = count;
+      document.querySelectorAll('.bath-pill').forEach(pill => {
+        if (pill.getAttribute('data-bath') === count) {
+          pill.className = 'bath-pill py-2 rounded-lg border text-xs font-bold bg-wifey text-white border-wifey shadow-xs';
+        } else {
+          pill.className = 'bath-pill py-2 rounded-lg border text-xs font-semibold bg-white border-gray-200 text-charcoal';
+        }
+      });
+    }
+
+    function togglePet(petType) {
+      const btn = document.getElementById(`pet-${petType}`);
+      if (petType === 'None') {
+        state.home.pets = ['None'];
+        ['Dog', 'Cat', 'Other'].forEach(p => {
+          document.getElementById(`pet-${p}`).className = 'pet-btn py-2 rounded-xl border border-gray-200 text-xs font-medium hover:border-wifey transition-colors bg-white text-charcoal';
+        });
+        btn.className = 'pet-btn py-2 rounded-xl border border-wifey bg-wifey text-white text-xs font-bold shadow-xs';
+        return;
+      }
+
+      // Remove None if clicking a pet
+      const noneIndex = state.home.pets.indexOf('None');
+      if (noneIndex > -1) state.home.pets.splice(noneIndex, 1);
+      document.getElementById('pet-None').className = 'pet-btn py-2 rounded-xl border border-gray-200 text-xs font-medium hover:border-wifey transition-colors bg-white text-charcoal';
+
+      const idx = state.home.pets.indexOf(petType);
+      if (idx > -1) {
+        state.home.pets.splice(idx, 1);
+        btn.className = 'pet-btn py-2 rounded-xl border border-gray-200 text-xs font-medium hover:border-wifey transition-colors bg-white text-charcoal';
+      } else {
+        state.home.pets.push(petType);
+        btn.className = 'pet-btn py-2 rounded-xl border border-wifey bg-wifey text-white text-xs font-bold shadow-xs';
+      }
+    }
+
+    // ================= STEP 7: BUILD SUMMARY PREVIEW =================
+    function populateFinalSummary() {
+      document.getElementById('summaryDurationTitle').innerText = state.duration.title;
+      document.getElementById('summaryPriceText').innerText = `$${state.duration.price}`;
+      document.getElementById('summaryFrequencyText').innerText = `${state.frequency} Service`;
+
+      // Priority
+      const priorityMeta = taskDictionary[state.priorityTask] || { name: 'Household Cleaning', icon: '🧹' };
+      document.getElementById('summaryPriorityTask').innerText = `${priorityMeta.icon} ${priorityMeta.name}`;
+      document.getElementById('summaryPriorityNotes').innerText = state.priorityNotes.trim() ? `"${state.priorityNotes}"` : 'No additional notes provided';
+
+      // To-do list pills
+      const pillsContainer = document.getElementById('summaryTaskPills');
+      pillsContainer.innerHTML = '';
+      state.selectedTasks.forEach(t => {
+        const meta = taskDictionary[t];
+        const span = document.createElement('span');
+        span.className = 'inline-flex items-center gap-1 bg-wifey-light text-wifey-dark border border-pink-200 text-xs font-semibold px-2.5 py-1 rounded-full';
+        span.innerHTML = `<span>${meta.icon}</span> <span>${meta.name}</span>`;
+        pillsContainer.appendChild(span);
+      });
+
+      // Schedule & home
+      document.getElementById('summaryScheduleText').innerText = `${state.preferredDay} • ${state.preferredTime}`;
+      
+      const suburb = state.home.suburb || 'Sylhet';
+      const postcode = state.home.postcode || '3100';
+      document.getElementById('summaryLocationText').innerText = `${suburb}, ${postcode} (${state.home.beds} Bed, ${state.home.baths} Bath)`;
+
+      const name = `${state.home.firstName || 'Zannatul'} ${state.home.lastName || 'Ferdousi'}`;
+      const phone = state.home.phone || '+8801716543250';
+      const email = state.home.email || 'imzannatul1981@gmail.com';
+      document.getElementById('summaryCustomerInfo').innerText = `${name} • ${phone} • ${email}`;
+    }
+
+    // ================= STEP 8: FINAL SUBMISSION =================
+    function submitFinalRequest() {
+      // Generate clean random Australian reference number
+      const randomCode = Math.floor(1000 + Math.random() * 9000);
+      const ref = `#HW-${randomCode}`;
+      
+      document.getElementById('bookingRef').innerText = ref;
+      document.getElementById('confirmPackage').innerText = `${state.duration.title} ($${state.duration.price})`;
+      document.getElementById('confirmTime').innerText = `${state.preferredDay} • ${state.preferredTime.split('(')[0].trim()}`;
+
+      // Transition to Step 8 (Confirmation)
+      goToStep(8);
+      // Hide sticky footer on success screen
+      document.getElementById('stickyNavFooter').classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ================= NAVIGATION LOGIC & VALIDATION =================
+    function nextStep() {
+      // Step Validation
+      if (state.currentStep === 1) {
+        if (!state.duration || !state.duration.hours) {
+          alert('Please choose your Wifey duration to continue.');
+          return;
+        }
+      } else if (state.currentStep === 2) {
+        if (state.selectedTasks.length === 0) {
+          alert('Please select at least one task for your Wifey To-Do List.');
+          return;
+        }
+        populateStep3Priorities();
+      } else if (state.currentStep === 5) {
+        if (!state.preferredDay || !state.preferredTime) {
+          alert('Please select both a preferred day and time window.');
+          return;
+        }
+      } else if (state.currentStep === 6) {
+        const fn = document.getElementById('custFirstName').value.trim();
+        const ln = document.getElementById('custLastName').value.trim();
+        const ph = document.getElementById('custPhone').value.trim();
+        const em = document.getElementById('custEmail').value.trim();
+        const st = document.getElementById('custStreet').value.trim();
+        const sub = document.getElementById('custSuburb').value.trim();
+        const pc = document.getElementById('custPostcode').value.trim();
+
+        if (!fn || !ln || !ph || !em || !st || !sub || !pc) {
+          alert('Please fill in your name, contact details, and home address.');
+          return;
+        }
+        populateFinalSummary();
+      } else if (state.currentStep === 7) {
+        submitFinalRequest();
+        return;
+      }
+
+      if (state.currentStep < state.totalSteps) {
+        goToStep(state.currentStep + 1);
+      }
+    }
+
+    function prevStep() {
+      if (state.currentStep > 1) {
+        goToStep(state.currentStep - 1);
+      }
+    }
+
+    function goToStep(stepNumber) {
+      // Hide all steps
+      for (let i = 1; i <= 8; i++) {
+        const el = document.getElementById(`step-${i}`);
+        if (el) el.classList.add('hidden');
+      }
+
+      // Show target step
+      const target = document.getElementById(`step-${stepNumber}`);
+      if (target) {
+        target.classList.remove('hidden');
+        target.classList.remove('step-content');
+        void target.offsetWidth; // trigger reflow for animation
+        target.classList.add('step-content');
+      }
+
+      state.currentStep = stepNumber;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Update UI components
+      updateProgressIndicator();
+      updateStickyBar();
+    }
+
+    function updateProgressIndicator() {
+      const stepIndex = Math.min(state.currentStep, 7);
+      const meta = stepMetadata[stepIndex - 1] || stepMetadata[0];
+
+      // Progress bar percentage
+      const percent = Math.round((stepIndex / 7) * 100);
+      document.getElementById('progressBar').style.width = `${percent}%`;
+      document.getElementById('stepPercentText').innerText = `${percent}% complete`;
+      document.getElementById('stepPillBadge').innerText = meta.pill;
+      document.getElementById('stepTitlePreview').innerText = meta.title;
+    }
+
+    function updateStickyBar() {
+      if (state.currentStep >= 8) return;
+
+      const meta = stepMetadata[state.currentStep - 1] || stepMetadata[0];
+      
+      // Update values in bottom bar
+      document.getElementById('stickyPackageName').innerText = state.duration.title;
+      document.getElementById('stickyPriceTag').innerText = `$${state.duration.price}`;
+
+      // Build task preview subtext
+      if (state.selectedTasks.length > 0) {
+        const firstTwo = state.selectedTasks.slice(0, 2).map(id => taskDictionary[id]?.name.split(' ')[0]).join(', ');
+        const remainder = state.selectedTasks.length - 2;
+        document.getElementById('stickySubtext').innerText = remainder > 0 ? `${firstTwo} + ${remainder} more` : firstTwo;
+      } else {
+        document.getElementById('stickySubtext').innerText = 'Select your home priorities';
+      }
+
+      // Back button visibility
+      const backBtn = document.getElementById('backBtn');
+      if (state.currentStep > 1) {
+        backBtn.classList.remove('hidden');
+        backBtn.classList.add('flex');
+      } else {
+        backBtn.classList.remove('flex');
+        backBtn.classList.add('hidden');
+      }
+
+      // Next CTA text
+      const nextBtnText = document.getElementById('nextBtnText');
+      if (state.currentStep === 7) {
+        nextBtnText.innerText = 'Request My Wifey';
+      } else {
+        nextBtnText.innerText = `Continue: ${meta.nextText}`;
+      }
+    }
+
+    // ================= INITIALISATION =================
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set defaults visually
+      selectDuration(3, 179, '3 Hour Wifey');
+      renderTaskSelectionStyles();
+      updateTaskCount();
+      selectFrequency('Fortnightly');
+      selectDay('Wednesday');
+      selectTimeWindow('Morning (8:00 AM - 12:00 PM)');
+      togglePet('Dog');Zannatul
+      updateProgressIndicator();
+      updateStickyBar();
+
+      // Pre-fill dummy data to allow quick prototyping / test flows
+      document.getElementById('custFirstName').value = 'Zannatul';
+      document.getElementById('custLastName').value = 'Ferdousi';
+      document.getElementById('custPhone').value = '+8801716543250';
+      document.getElementById('custEmail').value = 'imzannatul1981@gmail.com';
+      document.getElementById('custStreet').value = '51/1,sopnil, 2nd floor,Sylhet';
+      document.getElementById('custSuburb').value = 'Sylhet';
+      document.getElementById('custPostcode').value = '3100';
+      state.home.firstName = 'Zannatul';
+      state.home.lastName = 'Ferdousi';
+      state.home.phone = '+8801716543250';
+      state.home.email = 'imzannatul1981@gmail.com';
+      state.home.street = '51/1,sopnil, 2nd floor,Sylhet';
+      state.home.suburb = 'Sylhet';
+      state.home.postcode = '3100';
+    });
+  </script>
+</body>
+</html>
