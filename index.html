@@ -711,7 +711,7 @@
               type="tel" 
               id="custPhone" 
               required
-              placeholder="+8801716543250"
+              placeholder="0412 345 678"
               class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
               oninput="state.home.phone = this.value"
             />
@@ -761,7 +761,7 @@
               type="text" 
               id="custPostcode" 
               required
-              placeholder="3100"
+              placeholder="2021"
               maxlength="4"
               class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-wifey/40 text-sm"
               oninput="state.home.postcode = this.value"
@@ -890,7 +890,7 @@
           <!-- Contact details review -->
           <div class="bg-pink-50/30 p-3 rounded-xl">
             <span class="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted block">Booking Under:</span>
-            <p class="font-semibold text-charcoal text-xs sm:text-sm mt-0.5" id="summaryCustomerInfo">Zannatul Ferdousi • +8801716543250 • imzannatul1981@gmail.com</p>
+            <p class="font-semibold text-charcoal text-xs sm:text-sm mt-0.5" id="summaryCustomerInfo">Zannatul Ferdousi • 0412 345 678 • imzannatul1981@gmail.com</p>
           </div>
 
         </div>
@@ -1348,12 +1348,12 @@
       // Schedule & home
       document.getElementById('summaryScheduleText').innerText = `${state.preferredDay} • ${state.preferredTime}`;
       
-      const suburb = state.home.suburb || 'Sylhet';
-      const postcode = state.home.postcode || '3100';
+      const suburb = state.home.suburb || 'Paddington';
+      const postcode = state.home.postcode || '2021';
       document.getElementById('summaryLocationText').innerText = `${suburb}, ${postcode} (${state.home.beds} Bed, ${state.home.baths} Bath)`;
 
       const name = `${state.home.firstName || 'Zannatul'} ${state.home.lastName || 'Ferdousi'}`;
-      const phone = state.home.phone || '+8801716543250';
+      const phone = state.home.phone || '0412 345 678';
       const email = state.home.email || 'imzannatul1981@gmail.com';
       document.getElementById('summaryCustomerInfo').innerText = `${name} • ${phone} • ${email}`;
     }
@@ -1513,18 +1513,18 @@
       // Pre-fill dummy data to allow quick prototyping / test flows
       document.getElementById('custFirstName').value = 'Zannatul';
       document.getElementById('custLastName').value = 'Ferdousi';
-      document.getElementById('custPhone').value = '+8801716543250';
+      document.getElementById('custPhone').value = '0412 345 678';
       document.getElementById('custEmail').value = 'imzannatul1981@gmail.com';
-      document.getElementById('custStreet').value = '51/1,sopnil, 2nd floor,Sylhet';
-      document.getElementById('custSuburb').value = 'Sylhet';
-      document.getElementById('custPostcode').value = '3100';
+      document.getElementById('custStreet').value = '42 Paddington Street';
+      document.getElementById('custSuburb').value = 'Paddington';
+      document.getElementById('custPostcode').value = '2021';
       state.home.firstName = 'Zannatul';
       state.home.lastName = 'Ferdousi';
-      state.home.phone = '+8801716543250';
+      state.home.phone = '0412 345 678';
       state.home.email = 'imzannatul1981@gmail.com';
-      state.home.street = '51/1,sopnil, 2nd floor,Sylhet';
-      state.home.suburb = 'Sylhet';
-      state.home.postcode = '3100';
+      state.home.street = '42 Paddington Street';
+      state.home.suburb = 'Paddington';
+      state.home.postcode = '2021';
     });
   </script>
 </body>
